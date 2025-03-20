@@ -1,9 +1,9 @@
-name: deploy
+name: pull
 
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   pull-last-config-and-restart:
