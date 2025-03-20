@@ -7,16 +7,11 @@ services:
     depends_on:
       - postgres
       - redis
-    env_file:
-      - .env.flix
     volumes:
       - /home/debian/services/gauphim-application/.env.flix:/gau_phim/.env.flix
     networks:
       app-network:
         ipv4_address: 172.18.0.10
-    environment:
-      DATABASE_URL: "postgres://user:password@172.18.0.54:5432/mydb"
-      REDIS_URL: "redis://:password@172.18.0.67:6379"
 
 networks:
   app-network:
