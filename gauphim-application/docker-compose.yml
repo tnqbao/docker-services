@@ -11,7 +11,7 @@ services:
       app-network:
         ipv4_address: 172.18.0.10
   gau-phim-frontend:
-    image: gau_phim_frontend:latest
+    image: iamqbao/gau_phim_frontend:latest
     container_name: gau-phim-frontend
     restart: always
     volumes:
