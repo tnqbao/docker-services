@@ -4,9 +4,8 @@ services:
   gau-phim-backend:
     image: iamqbao/gau_phim_backend:latest
     container_name: gau-phim-backend
-    depends_on:
-      - postgres
-      - redis
+    restart:
+      always
     volumes:
       - /home/debian/services/gauphim-application/.env.flix:/gau_phim/.env.flix
     networks:
