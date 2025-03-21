@@ -4,13 +4,21 @@ services:
   gau-phim-backend:
     image: iamqbao/gau_phim_backend:latest
     container_name: gau-phim-backend
-    restart:
-      always
+    restart: always
     volumes:
       - .env.flix:/gau_phim/.env.flix
     networks:
       app-network:
         ipv4_address: 172.18.0.10
+  gau-phim-frontend:
+    image: gau_phim_frontend:latest
+    container_name: gau-phim-frontend
+    restart: always
+    volumes:
+      - .env.fe:/app/.env.fe
+    networks:
+      app-network:
+        ipv4_address: 172.18.0.11
 
 networks:
   app-network:
