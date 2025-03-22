@@ -15,7 +15,7 @@ services:
     container_name: gau-phim-frontend
     restart: always
     volumes:
-      - .env.fe:/app/.env.fe
+      - .env:/app/.env
     networks:
       app-network:
         ipv4_address: 172.18.0.11
