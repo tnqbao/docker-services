@@ -5,9 +5,9 @@ services:
     image: rabbitmq:management
     container_name: rabbitmq
     restart: unless-stopped
-#    ports:
-#      - "5672:5672"
-#      - "15672:15672"
+    expose:
+      - "15672"
+      - "5672"
     networks:
       - app-network
 
