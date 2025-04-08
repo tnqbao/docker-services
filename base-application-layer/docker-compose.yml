@@ -8,8 +8,7 @@ services:
     volumes:
       - .env:/gau_user/.env
     networks:
-      app-network:
-        ipv4_address: 172.18.0.2
+      - app-network
 
   gau-validation-service:
     image: iamqbao/gau_validation_service:latest
@@ -18,8 +17,7 @@ services:
     volumes:
       - .env:/gau_validation/.env
     networks:
-      app-network:
-        ipv4_address: 172.18.0.3
+      - app-network
 
 networks:
   app-network:
