@@ -2,6 +2,7 @@
 .env
 .env.*
 
+*.env
 .git
 .vscode
 .idea
