@@ -10,9 +10,27 @@ services:
     networks:
       - app-network
 
+  gau-user-service-backup:
+    image: iamqbao/gau_user_service:latest
+    container_name: gau-user-service-backup
+    restart: always
+    volumes:
+      - .env:/gau_user/.env
+    networks:
+      - app-network
+
   gau-validation-service:
     image: iamqbao/gau_validation_service:latest
     container_name: gau-validation-service
+    restart: always
+    volumes:
+      - .env:/gau_validation/.env
+    networks:
+      - app-network
+
+  gau-validation-service-backup:
+    image: iamqbao/gau_validation_service:latest
+    container_name: gau-validation-service-backup
     restart: always
     volumes:
       - .env:/gau_validation/.env
