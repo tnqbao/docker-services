@@ -10,6 +10,15 @@ services:
     networks:
       - app-network
 
+  gau-phim-backend-backup:
+    image: iamqbao/gau_phim_backend:latest
+    container_name: gau-phim-backend-backup
+    restart: always
+    volumes:
+      - .env.flix:/gau_phim/.env.flix
+    networks:
+      - app-network
+
   gau-phim-frontend:
     image: iamqbao/gau_phim_frontend:latest
     container_name: gau-phim-frontend
