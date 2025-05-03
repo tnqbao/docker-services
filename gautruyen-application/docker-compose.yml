@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  gau-truyen-backend:
+    image: iamqbao/gau_truyen_backend:latest
+    container_name: gau-truyen-backend
+    restart: always
+    volumes:
+      - .env:/gau_truyen/.env
+    networks:
+      - app-network
+
+  gau-truyen-backend-backup:
+    image: iamqbao/gau_truyen_backend:latest
+    container_name: gau-truyen-backend-backup
+    restart: always
+    volumes:
+      - .env.comic:/gau_truyen/.env.comic
+    networks:
+      - app-network
+
+  gau-truyen-frontend:
+    image: iamqbao/gau_truyen_frontend:latest
+    container_name: gau-truyen-frontend
+    restart: always
+    volumes:
+      - .env:/app/.env
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    external: true

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-IMAGE_NAME="iamqbao/gau_phim_frontend:latest"
-CONTAINER_NAME="gau-phim-frontend"
+IMAGE_NAME="iamqbao/gau_truyen_frontend:latest"
+CONTAINER_NAME="gau-truyen-frontend"
 
 docker pull $IMAGE_NAME
 
